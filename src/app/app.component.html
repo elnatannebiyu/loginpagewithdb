@@ -341,7 +341,7 @@
       </g>
     </svg>
 
-    <span>{{ title }} app is running!</span>
+   
 
     <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <title>Rocket Ship Smoke</title>
@@ -433,7 +433,12 @@
       <pre *ngSwitchCase="'test'">ng test</pre>
       <pre *ngSwitchCase="'build'">ng build</pre>
   </div>
-
+  <div>
+    <button (click)="logout()" *ngIf="this.authService.isLoggedIn" type="button" class="btn btn-primary">Logout</button>
+  </div>
+  
+  <router-outlet></router-outlet>
+  
   <!-- Links -->
   <div class="card-container">
     <a class="circle-link" title="Find a Local Meetup" href="https://www.meetup.com/find/?keywords=angular" target="_blank" rel="noopener">
